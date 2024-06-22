@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\DTO\Vacancies;
+namespace App\DTO\Partners;
 
 use Spatie\DataTransferObject\DataTransferObject;
 

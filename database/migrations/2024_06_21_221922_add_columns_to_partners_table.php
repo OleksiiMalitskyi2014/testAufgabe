@@ -20,7 +20,7 @@ class AddColumnsToPartnersTable extends Migration
             $table->integer('plz')->after('haus_nr');
             $table->string('country')->after('plz');
             $table->string('website')->after('country');
-            $table->string('phone')->after('website');
+            $table->integer('phone')->after('website');
             $table->string('email')->after('phone');
             $table->string('logo')->after('email');
             $table->string('pin_logo')->after('logo');
