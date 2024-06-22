@@ -18,9 +18,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/generate', 'App\Http\Controllers\PDFController@index');
+Route::prefix('/admin')->group(static function () {
+    Route::get('/partner/{id}', 'App\Http\Controllers\PartnersController@getPartner');
+    Route::get('/partners', 'App\Http\Controllers\PartnersController@getPartners');
+    Route::post('/create', 'App\Http\Controllers\PartnersController@create');
+    Route::post('/update', 'App\Http\Controllers\PartnersController@update');
+    Route::post('/delete', 'App\Http\Controllers\PartnersController@delete');
+});
 
-Route::post('/set-data', 'App\Http\Controllers\PDFController@setDataToSession');
-Route::get('/data/{random}', 'App\Http\Controllers\PDFController@getDataToSession');
-Route::get('/generate-cookie-key', 'App\Http\Controllers\PDFController@generateCookieKey');
+Route::get('/partner/{id}', 'App\Http\Controllers\PartnersController@getPartners');
+Route::get('/partners', 'App\Http\Controllers\PartnersController@getPartners');
 

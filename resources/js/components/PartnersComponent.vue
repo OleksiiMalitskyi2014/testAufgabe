@@ -7,6 +7,8 @@
 </template>
 
 <script>
+    import axios from 'axios'
+
     export default {
         components: {
 
@@ -16,10 +18,17 @@
                 partners: [],
             }
         },
+        mounted() {
+            this.getPartners();
+        },
         methods:
             {
                 getPartners: function () {
-                    // axios
+                    axios.get('/api/partners').then((res)=>{
+                        if(res.data.status !== 422) {
+                            this.partners = res.data.data;
+                        }
+                    })
                 }
             }
     }

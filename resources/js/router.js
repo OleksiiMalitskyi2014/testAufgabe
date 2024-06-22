@@ -1,12 +1,12 @@
 import {createRouter, createWebHistory} from "vue-router";
 
-import Generator from "./components/HomeComponent";
+import Home from "./components/HomeComponent";
 
 const routes = [
     {
         path: "/",
-        name: "generator",
-        component: Generator,
+        name: "Home",
+        component: Home,
     },
 ]
 

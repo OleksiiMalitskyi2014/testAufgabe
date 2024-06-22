@@ -17,7 +17,7 @@ class CreatePartnerDTO extends DataTransferObject
     public int $plz;
     public string $country;
     public string $website;
-    public int $phone;
+    public string $phone;
     public string $email;
     public string $logo;
     public int $pin_logo;
@@ -37,7 +37,7 @@ class CreatePartnerDTO extends DataTransferObject
             'plz' => (int)$data['plz'],
             'country' => (int)$data['country'],
             'website' => (int)$data['website'],
-            'phone' => (int)$data['phone'],
+            'phone' => (string)$data['phone'],
             'email' => (string)$data['email'],
             'logo' => (string)$data['logo'],
             'pin_logo' => (int)$data['pin_logo'],

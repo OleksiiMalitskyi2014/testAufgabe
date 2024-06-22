@@ -3,10 +3,11 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\ServiceProvider;
 use App\Repositories\Interfaces\PartnersRepositoriesInterface;
 use App\Repositories\PartnersRepositories;
 
-class RepositoriesServiceProvider
+class RepositoriesServiceProvider extends ServiceProvider
 {
     /**
      * Register services.

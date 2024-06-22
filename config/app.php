@@ -175,6 +175,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\CustomServiceProvider::class,
+        App\Providers\RepositoriesServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
 
     ],

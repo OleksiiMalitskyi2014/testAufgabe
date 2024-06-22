@@ -15,7 +15,7 @@ class PartnersController extends Controller
 
     /**
      * PDFController constructor.
-     * @param PartnersServiceInterface $PDFServiceInterface
+     * @param PartnersServiceInterface $partnersServiceInterface
      */
     public function __construct(PartnersServiceInterface $partnersServiceInterface)
     {
@@ -40,7 +40,7 @@ class PartnersController extends Controller
     /**
      * @return array
      */
-    public function getPartners(): array
+    public function getPartners(): object
     {
         $data = $this->partnersServiceInterface->getPartners();
 
