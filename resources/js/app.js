@@ -5,9 +5,11 @@ import App from "./components/App";
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 
-import './../css/app.css'
 
-createApp({extends: App,})
+const app = createApp({extends: App,})
     .use(router)
     .use(VueAxios,axios)
-    .mount("#app");
+
+app.config.globalProperties.mapKey = process.env.MIX_MAP_KEY
+
+app.mount("#app");

@@ -1,6 +1,9 @@
 <template>
-    <div class="d-flex justify-content-around">
-        <div class="d-flex flex-column justify-content-around align-items-start p-5" style="">
+    <div id="home">
+        <div class="title-wrapper">
+            <h1>Service Partners</h1>
+        </div>
+        <div>
             <partners-component></partners-component>
         </div>
     </div>
@@ -11,6 +14,7 @@
 
 <script>
     import PartnersComponent from "./PartnersComponent";
+    import home from "./../../sass/home.scss"
 
     export default {
         components: {

@@ -1,0 +1,42 @@
+@import "app";
+
+#partners {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  ul {
+    margin-right: 50px;
+    li {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      border-radius: 4px;
+      background: $white;
+      padding: 20px 20px;
+      margin-bottom: 20px;
+      height: 100px;
+      width: 300px;
+      color: $strong-grey;
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+      .description {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 5px;
+      }
+    }
+  }
+  .list {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    padding-bottom: 10px;
+  }
+}
